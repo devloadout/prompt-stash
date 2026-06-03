@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Stash — Save & Reuse AI Prompts",
+  "version": "1.0.0",
+  "description": "Save your best AI prompts and copy them in one click. Works with ChatGPT, Claude, Gemini — anywhere.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Prompt Stash"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.gumroad.com/*"],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

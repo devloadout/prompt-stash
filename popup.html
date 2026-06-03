@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="logo">&lt;&gt;</span> Prompt Stash</div>
+    <button id="addBtn" class="icon-btn" title="New prompt">＋</button>
+  </header>
+
+  <input id="search" class="search" placeholder="Search prompts…" />
+
+  <!-- add/edit form (hidden by default) -->
+  <div id="form" class="form hidden">
+    <input id="fTitle" placeholder="Title (e.g. Blog outline)" />
+    <input id="fFolder" class="pro-field" placeholder="Folder (Pro)" />
+    <textarea id="fBody" rows="5" placeholder="Your prompt text…"></textarea>
+    <div class="form-actions">
+      <button id="saveBtn" class="btn primary">Save</button>
+      <button id="cancelBtn" class="btn ghost">Cancel</button>
+    </div>
+  </div>
+
+  <div id="list" class="list"></div>
+
+  <footer>
+    <span id="count" class="muted"></span>
+    <span class="foot-links">
+      <a id="settingsLink" href="#">Settings</a>
+      <a id="proLink" href="https://alphaletgo.gumroad.com/l/prompt-stash-pro" target="_blank">Get Pro</a>
+    </span>
+  </footer>
+
+  <!-- settings panel -->
+  <div id="settings" class="settings hidden">
+    <p class="muted">Enter your Pro license key to unlock unlimited prompts, folders, and export.</p>
+    <input id="licenseKey" placeholder="Gumroad license key" />
+    <div class="form-actions">
+      <button id="activateBtn" class="btn primary">Activate</button>
+      <button id="closeSettings" class="btn ghost">Close</button>
+    </div>
+    <div id="proTools" class="hidden">
+      <hr/>
+      <button id="exportBtn" class="btn ghost">Export JSON</button>
+      <label class="btn ghost" style="cursor:pointer">Import JSON<input id="importFile" type="file" accept="application/json" hidden /></label>
+    </div>
+    <p id="settingsMsg" class="msg"></p>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
